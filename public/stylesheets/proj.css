@@ -1,0 +1,121 @@
+@import url("font.css");
+
+body {
+  background: rgba(0,0,0,.04);
+  color: rgba(0,0,0,.87);
+  margin: 0;
+
+  font-family: Roboto, "Noto Sans", "Noto Sans CJK SC", "Source Han Sans", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+
+body.hidden {
+  opacity: 0;
+}
+.cent{
+  color rgba(0,0,0,.50);
+}
+a {
+  font-family: "Roboto Slab";
+  color: rgba(0,0,0,.70);
+}
+
+.brand-container {
+	transition: height 1s ease;
+  height: 20vh;
+}
+.foo {
+	height: 100vh;
+}
+
+.brand {
+  display: block;
+  text-align: center;
+
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+
+  font-weight: 100;
+  font-size: 72px;
+  font-family: "Roboto Mono";
+
+}
+
+@media (max-width: 650px) {
+  .brand {
+    transform-origin: top;
+    transform: scale(0.7) translateY(-50%);
+  }
+}
+
+.brand .cite {
+  color: rgba(0,0,0,.54);
+  font-size: 32px;
+  position: absolute;
+  font-weight: 200;
+  display: -webkit-inline-box;
+  transform: translateY(100%);
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 0 80px;
+  font-size: 18px;
+  line-height: 24px;
+  transition: margin 1s ease;
+}
+
+.unload {
+  margin: 200px auto;
+}
+
+.footer {
+  box-sizing: border-box;
+  max-width: 800px;
+  margin: 100px auto 50px auto;
+  padding: 0 80px;
+  color: rgba(0,0,0,.30);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.title {
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.para {
+  margin: 25px 0;
+}
+
+.lead {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.list {
+  list-style-type: circle;
+  padding-left: 0;
+  margin: 0;
+}
+
+.hang {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  padding-right: 10px;
+}
+
+.hangbase {
+  position: relative;
+}

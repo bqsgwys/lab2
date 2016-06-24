@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=0.8, maximum-scale=0.8, minimun-scale=0.8, user-scalable=false')
+    link(rel='stylesheet', href='/stylesheets/proj.css')
+    script(src='/javascripts/jquery-2.2.2.min.js')
+    script(src='/javascripts/proj.js')
+  body.hidden
+    #title.brand-container.foo
+      .brand
+        | #{id}
+        span.cite #{version}
+    .container.unload
+      | #{brief}
+    .container.unload
+      #desc.title
+        | #{name}
+      - each data in datas
+        .para
+          .lead
+            | #{data.lead}
+          -each para in data.paras
+            .para
+              |#{para}
+    #member.container.unload
+      .title
+        | Members
+      -each mem in mems
+        .para
+          .lead
+            | #{mem.full}
+            |,@
+            | #{mem.name}
+          ul.list
+            -each desc in mem.descs
+              li #{desc}
+    .container.unload
+      #FAQ.title
+        | FAQ
+      -each faq in faqs
+        .para
+          .hangbase
+            span.hang Q:
+            | #{faq.Q}
+          .hangbase
+            span.hang A:
+            | #{faq.A}
+    .container.unload(segment='')
+      #url.title
+        | Other Infomations
+      .para
+      -each url in urls
+        | #{url.name}
+        a(href=url.text) #{url.text}
+        br
+    .footer
+      | Proudly powered by W3C, MDN, browsers and author's hand
+      br
+      |       THSITLab & THSITG, CircuitCoder, 2016. This webpage is released under CC0.
